@@ -140,7 +140,7 @@ int main()
     if(lanjut=="y" || lanjut=="Y")
     {
         cout << "============================================" << endl;
-        cout << "               Pembayaran" << endl;
+        cout << "+              Pembayaran                  +" << endl;
         cout << "============================================" << endl;
 
         customer.infopenumpang();
@@ -166,12 +166,18 @@ int main()
             jadwal6.infojadwal();
             harga_final=jadwal6.harga;
         }
-    cout <<"Harga Total :"<<jumlahtiket * harga_final;
-
-    cout << endl;
+        cout << endl;
+        cout << "============================================" << endl;
+        cout << "+    Total Pembayaran : Rp."<<jumlahtiket * harga_final<<"              +"<<endl;
+        cout << "============================================" << endl;
+        cout << endl;
+        cout <<"Silahkan Melakukan Pembayaran"<<endl;
+        cout <<"Apakah anda sudah melakukan pembayaran(y/n): "; cin >> lanjut;
+     if(lanjut=="y" || lanjut=="Y")
+    {
     system("cls");
     cout << "============================================" << endl;
-    cout << "           Detail Perjalanan Anda" << endl;
+    cout << "+          Detail Perjalanan Anda          +"<< endl;
     cout << "============================================" << endl;
     
     customer.infopenumpang();
@@ -238,6 +244,7 @@ int main()
         }else if(jam_berangkat==3){
             pengemudi18.infopengemudi();
         }
+    }
     }
     }else{
         return 0;
